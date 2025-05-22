@@ -1,6 +1,6 @@
 # Voca-Prep — AI Voice-Powered Mock Interview Assistant
 
-**Voca-Prep** is your personal AI-based interview coach. Developed by Afuh Flyine Tembeng ([@flyine](https://github.com/flyine)), it lets you generate realistic mock interviews, answer questions via voice, and get instant, detailed feedback to conquer your next job interview.
+**Voca-Prep** is your personal AI-based interview coach. Developed by Afuh Flynn Tembeng ([@afuhflynn](https://github.com/afuhflynn)), it lets you generate realistic mock interviews, answer questions via voice, and get instant, detailed feedback to conquer your next job interview.
 
 ---
 
@@ -35,7 +35,7 @@
 1. **Clone repository**
 
    ```bash
-   git clone https://github.com/flyine/voca-Prep.git
+   git clone https://github.com/afuhflynn/voca-Prep.git
    cd voca-Prep
    ```
 2. **Install dependencies**
@@ -70,9 +70,9 @@
 
 ## 🤝 Connect & Support
 
-* GitHub: [@flyine](https://github.com/flyine)
-* Twitter: [@flyine\_dev](https://twitter.com/flyine_dev)
-* Email: [flyinetembeng@gmail.com](mailto:flyinetembeng@gmail.com)
+* GitHub: [@afuhflynn](https://github.com/afuhflynn)
+* Twitter: [@afuhflynn](https://twitter.com/afuhflynn)
+* Email: [flyinnsafuh@gmail.com](mailto:flyinnsafuh@gmail.com)
 
 Feel free to file issues or open PRs in the repo.
 
