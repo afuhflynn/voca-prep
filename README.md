@@ -1,5 +1,7 @@
 # Voca-Prep — AI Voice-Powered Mock Interview Assistant
 
+![Preview](./public/preview.svg)
+
 **Voca-Prep** is your personal AI-based interview coach. Developed by Afuh Flynn Tembeng ([@afuhflynn](https://github.com/afuhflynn)), it lets you generate realistic mock interviews, answer questions via voice, and get instant, detailed feedback to conquer your next job interview.
 
 ---
