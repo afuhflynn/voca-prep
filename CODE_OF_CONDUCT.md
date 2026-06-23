@@ -22,6 +22,6 @@ Examples of unacceptable behavior:
 
 ## Enforcement
 
-Violations of this Code of Conduct may be reported by contacting the project maintainer at [flyinetembeng@gmail.com](mailto:flyinetembeng@gmail.com). All reports will be reviewed and investigated with respect and confidentiality.
+Violations of this Code of Conduct may be reported by contacting the project maintainer at [flyinnsafuh@gmail.com](mailto:flyinnsafuh@gmail.com). All reports will be reviewed and investigated with respect and confidentiality.
 
 We are committed to maintaining a w

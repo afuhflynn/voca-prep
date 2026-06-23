@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import DisplayTechIcons from "./DisplayTechIcons";
 
 import { cn, getRandomInterviewCover } from "@/lib/utils";
-import { getFeedbackByInterviewId } from "@/lib/actions/general.action";
 
 const InterviewCard = async ({
   interviewId,
@@ -75,7 +74,7 @@ const InterviewCard = async ({
 
             <div className="flex flex-row gap-2 items-center">
               <Image src="/star.svg" width={22} height={22} alt="star" />
-              {/* <p>{feedback?.totalScore || "---"}/100</p> */}
+              <p>{50 || "---"}/100</p>
             </div>
           </div>
 
@@ -84,6 +83,10 @@ const InterviewCard = async ({
             {feedback?.finalAssessment ||
               "You haven't taken this interview yet. Take it now to improve your skills."}
           </p> */}
+          <p className="line-clamp-2 mt-5">
+            You haven't taken this interview yet. Take it now to improve your
+            skills
+          </p>
         </div>
 
         <div className="flex flex-row justify-between">

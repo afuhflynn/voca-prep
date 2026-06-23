@@ -1,37 +1,10 @@
-"use client";
-
-import { authClient } from "@/lib/auth.client";
-import Link from "next/link";
-import Image from "next/image";
-
-import { Button } from "@/components/ui/button";
 import InterviewCard from "@/components/InterviewCard";
-
-import { getCurrentUser } from "@/lib/actions/auth.action";
-import {
-  getInterviewsByUserId,
-  getLatestInterviews,
-} from "@/lib/actions/general.action";
+import { Button } from "@/components/ui/button";
 import { dummyInterviews } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
 
-async function Home() {
-  const {
-    data: session,
-    isPending, //loading state
-    error, //error object
-    refetch, //refetch the session
-  } = authClient.useSession();
-
-  // const user = await getCurrentUser();
-
-  // const [userInterviews, allInterview] = await Promise.all([
-  //   getInterviewsByUserId(user?.id!),
-  //   getLatestInterviews({ userId: user?.id! }),
-  // ]);
-
-  // const hasPastInterviews = userInterviews?.length! > 0;
-  // const hasUpcomingInterviews = allInterview?.length! > 0;
-
+export default async function Home() {
   return (
     <>
       <section className="card-cta">
@@ -40,10 +13,14 @@ async function Home() {
           <p className="text-lg">
             Practice real interview questions & get instant feedback
           </p>
-
-          <Button asChild className="btn-primary max-sm:w-full">
-            <Link href="/interview">Start an Interview</Link>
-          </Button>
+          <div className="flex items-center gap-4 flex-col md:flex-row">
+            <Button asChild className="btn-primary max-sm:w-full">
+              <Link href="/interview">Create Interview Interactively</Link>
+            </Button>
+            <Button asChild className="btn-primary max-sm:w-full">
+              <Link href="/confirm-interview">Create Interview Manually</Link>
+            </Button>
+          </div>
         </div>
 
         <Image
@@ -55,50 +32,41 @@ async function Home() {
         />
       </section>
 
-      <section className="flex flex-col gap-6 mt-8">
-        <h2>Your Interviews</h2>
-        <div className="interviews-section">
-          {dummyInterviews ? (
-            dummyInterviews?.map((interview) => (
-              <InterviewCard
-                key={interview.id}
-                userId={interview.userId}
-                interviewId={interview.id}
-                role={interview.role}
-                type={interview.type}
-                techstack={interview.techstack}
-                createdAt={interview.createdAt}
-              />
-            ))
-          ) : (
-            <p>You haven&apos;t taken any interviews yet</p>
-          )}
+      {/* Past interviews section */}
+      <section className="w-full">
+        <h3 className="text-[28px] font-[600]">Your Past Interviews</h3>
+        <div className="w-full grid md:grid-cols-3 gap-[30px] pt-[30px]">
+          {dummyInterviews.map((item) => (
+            <InterviewCard
+              key={item.id}
+              interviewId={item.id}
+              userId={item.userId}
+              role={item.role}
+              type={item.type}
+              techstack={item.techstack}
+              createdAt={item.createdAt}
+            />
+          ))}
         </div>
       </section>
 
-      <section className="flex flex-col gap-6 mt-8">
-        <h2>Take Interviews</h2>
-
-        <div className="interviews-section">
-          {dummyInterviews ? (
-            dummyInterviews?.map((interview) => (
-              <InterviewCard
-                key={interview.id}
-                userId={interview.userId}
-                interviewId={interview.id}
-                role={interview.role}
-                type={interview.type}
-                techstack={interview.techstack}
-                createdAt={interview.createdAt}
-              />
-            ))
-          ) : (
-            <p>There are no interviews available</p>
-          )}
+      {/* Available interviews section */}
+      <section className="w-full">
+        <h3 className="text-[28px] font-[600]">Pick Your Interview</h3>
+        <div className="w-full grid md:grid-cols-3 gap-[30px] pt-[30px]">
+          {dummyInterviews.map((item) => (
+            <InterviewCard
+              key={item.id}
+              interviewId={item.id}
+              userId={item.userId}
+              role={item.role}
+              type={item.type}
+              techstack={item.techstack}
+              createdAt={item.createdAt}
+            />
+          ))}
         </div>
       </section>
     </>
   );
 }
-
-export default Home;

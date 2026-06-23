@@ -1,6 +1,6 @@
 "use client";
 
-import { authClient } from "@/lib/auth-client"; //import the auth client
+import { authClient } from "@/lib/auth.client"; //import the auth client
 import { useRouter } from "next/navigation";
 
 export const signOutUser = async () => {

@@ -6,9 +6,12 @@ export async function middleware(request: NextRequest) {
   const reqUrl = request.nextUrl;
   const pathName = reqUrl.pathname;
 
-  if (!sessionCookie && (pathName === "/" || pathName === "interview")) {
-    return NextResponse.redirect(new URL("/sign-in", request.url));
-  }
+  // if (
+  //   !sessionCookie &&
+  //   (pathName === "/" || pathName.startsWith("/interview"))
+  // ) {
+  //   return NextResponse.redirect(new URL("/sign-in", request.url));
+  // }
 
   return NextResponse.next();
 }
